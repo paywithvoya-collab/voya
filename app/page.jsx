@@ -1,5 +1,5 @@
-import SignUpChoiceScreen from "./features/onboarding/screens/SignUpChoiceScreen";
+import SplashScreen from "./features/onboarding/screens/SplashScreen";
 
 export default function Home() {
-  return <SignUpChoiceScreen />;
+  return <SplashScreen />;
 }

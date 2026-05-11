@@ -1,29 +1,28 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import VoyaLogo from "../../../components/brand/VoyaLogo";
 import RoleOptionButton from "../components/RoleOptionButton";
+import { ArrowLeftIcon } from "../../../components/ui/Icons";
 
 const signUpOptions = [
-  {
-    id: "business-owner",
-    label: "As Business Owner",
-    variant: "primary",
-  },
-  {
-    id: "freelancer",
-    label: "As Freelancer",
-    variant: "secondary",
-  },
+  { id: "business-owner", label: "As Business Owner", variant: "primary" },
+  { id: "freelancer", label: "As Freelancer", variant: "secondary" },
 ];
 
 export default function SignUpChoiceScreen() {
+  const router = useRouter();
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-10">
       <section className="relative w-full max-w-[22rem] rounded-[2rem] border border-black/5 bg-[var(--color-surface-muted)] px-5 pb-10 pt-6 shadow-[0_8px_30px_rgba(31,41,55,0.08)] sm:px-10">
         <button
           type="button"
-          aria-label="Close sign up dialog"
-          className="absolute left-5 top-5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/10 bg-white text-sm font-medium text-black/60 transition hover:text-black"
+          aria-label="Go back"
+          onClick={() => router.back()}
+          className="absolute left-5 top-5 inline-flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-white text-[var(--color-brand-primary-deep)] shadow-sm transition hover:bg-[var(--color-brand-soft)]"
         >
-          <span aria-hidden="true">x</span>
+          <ArrowLeftIcon className="h-4 w-4" />
         </button>
 
         <div className="flex flex-col items-center">
@@ -35,7 +34,11 @@ export default function SignUpChoiceScreen() {
 
         <div className="mt-6 space-y-6">
           {signUpOptions.map((option) => (
-            <RoleOptionButton key={option.id} variant={option.variant}>
+            <RoleOptionButton
+              key={option.id}
+              variant={option.variant}
+              onClick={() => router.push("/onboarding/contact")}
+            >
               {option.label}
             </RoleOptionButton>
           ))}
