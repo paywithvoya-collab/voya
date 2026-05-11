@@ -1,7 +1,5 @@
+import SignUpChoiceScreen from "./features/onboarding/screens/SignUpChoiceScreen";
+
 export default function Home() {
-  return (
-    <main>
-      <h1>Voya</h1>
-    </main>
-  );
+  return <SignUpChoiceScreen />;
 }
