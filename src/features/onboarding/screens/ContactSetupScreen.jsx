@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import PhotoPanel from "../components/common/PhotoPanel";
 import ProgressSteps from "../../../components/ui/ProgressSteps";
 import SegmentedControl from "../../../components/ui/SegmentedControl";
-import PhoneNumberField from "../components/PhoneNumberField";
+import PhoneNumberField from "../components/common/PhoneNumberField";
 import Button from "../../../components/ui/Button";
-import { ArrowLeftIcon, ArrowRightIcon, LockIcon } from "../../../components/ui/Icons";
+import { ArrowRightIcon, LockIcon } from "../../../components/ui/Icons";
 
 const AUTH_TABS = [
   { label: "Phone", value: "phone" },
@@ -23,25 +23,10 @@ export default function ContactSetupScreen() {
       <div className="relative flex w-full max-w-[960px] overflow-hidden rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.10)]">
 
         {/* ── Left: Photo panel ── */}
-        <div className="relative hidden lg:block lg:w-[55%]">
-          <button
-            type="button"
-            aria-label="Go back"
-            onClick={() => router.push("/onboarding")}
-            className="absolute left-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/90 text-[var(--color-brand-primary-deep)] shadow-sm backdrop-blur-sm transition hover:bg-white"
-          >
-            <ArrowLeftIcon className="h-4 w-4" />
-          </button>
-          <Image
-            src="/onboarding/signupSideIllustration.svg"
-            alt="Business person working on a laptop in a bright workspace"
-            fill
-            unoptimized
-            priority
-            sizes="(max-width: 1024px) 0vw, 55vw"
-            className="object-cover object-center"
-          />
-        </div>
+        <PhotoPanel 
+         imgSrc="/onboarding/signupSideIllustration.svg" 
+         alt="Business person working on a laptop in a bright workspace"
+        />
 
         {/* ── Right: Form panel ── */}
         <div className="flex w-full flex-col bg-white px-8 py-9 sm:px-10 lg:w-[45%]">

@@ -1,5 +1,5 @@
-import Button from "../../../components/ui/Button";
-import { ArrowRightIcon } from "../../../components/ui/Icons";
+import Button from "../../../../components/ui/Button";
+import { ArrowRightIcon } from "../../../../components/ui/Icons";
 
 export default function RoleOptionButton({ children, variant = "primary", ...props }) {
   return (

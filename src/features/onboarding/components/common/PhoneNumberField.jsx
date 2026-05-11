@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "../../../components/ui/Icons";
+import { ChevronDownIcon } from "../../../../components/ui/Icons";
 
 export default function PhoneNumberField({
   className = "",
