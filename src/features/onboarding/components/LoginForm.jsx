@@ -3,14 +3,24 @@ import { useState } from "react";
 import Button from "@/src/components/ui/Button";
 import { LockIcon, ArrowRightIcon, ArrowLeftIcon, L } from "@/src/components/ui/Icons";
 import {VoyaMark} from "@/src/components/brand/VoyaLogo";
+import inputValidation from "../utils/inputValidation";
 
 const LoginForm = () => {
   const [accountIdentifier, setAccountIdentifier] = useState("");
+  const [inputError, setInputError] = useState("");
+  const [showModal, setShowModal] = useState(false);
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
+    setInputError("");
+    const validationResult = inputValidation({accountIdentifier});
+    if (Object.keys(validationResult).length > 0 ) {
+      setInputError(validationResult.accountIdentifier);
+      return;
+    }
+    setShowModal(true);
+
   };
 
   return (
