@@ -24,17 +24,17 @@ const LoginForm = () => {
            <ArrowLeftIcon className="h-4 w-4" />
         </button>
 
-        <div className="w-[139px] h-[139px] rounded-[50%] bg-[#ffffff] m-auto flex items-center justify-center mb-6 shadow-[0_1px_4px_3px_rgba(0,0,0,0.03)]">
-            <VoyaMark className="w-[99px] h-[57.95px] w-auto" />
+        <div className="w-34.75 h-34.75 rounded-[50%] bg-[#ffffff] m-auto flex items-center justify-center mb-6 shadow-[0_1px_4px_3px_rgba(0,0,0,0.03)]">
+            <VoyaMark className="w-24.75 h-[57.95px] w-auto" />
         </div>
       <div className="flex flex-col  w-[382px] m-auto">
-      <h1 className="text-[#1C1B1B] text-[28px] font-extrabold leading-[40px] tracking-[0.9px] m-auto mb-2">Welcome back</h1>
-      <p className="text-[#3C4A46] text-[18px] font-medium leading-[28px] tracking-[0px] mb-7">Secure access to your wealth sanctuary.</p>
+      <h1 className=" font-montserrat text-[#1C1B1B] text-[28px] font-extrabold leading-[40px] tracking-[-0.9px] m-auto mb-2">Welcome back</h1>
+      <p className=" font-montserrat text-[#3C4A46] text-[18px] font-medium leading-[28px] tracking-[0px] mb-7">Secure access to your wealth sanctuary.</p>
       <form onSubmit={handleSubmit}>
         <div className="">
           <label 
            htmlFor="accountIdentifier"
-           className="text-[#006B5C] text-[12px] font-bold leading-[18px] tracking-[1.2px]  mb-1 block"
+           className="font-manrope text-[#006B5C] text-[12px] font-bold leading-[18px] tracking-[1.2px]  mb-1 block"
            >
             ACCOUNT IDENTIFIER
         </label>
@@ -44,24 +44,24 @@ const LoginForm = () => {
             value={accountIdentifier}
             onChange={(e) => setAccountIdentifier(e.target.value)}
             placeholder="Phone number or Email"
-            className="block w-full rounded-lg border border-[#E1E1E1] bg-white pl-12 pr-4 py-[17px] text-sm text-[#2C2C2C] outline-none placeholder:text-[#C1C1C1] focus:border-[var(--color-brand-accent)] focus:ring-1 focus:ring-[var(--color-brand-accent)]"
+            className=" font-manrope block w-full rounded-lg border border-[#E1E1E1] bg-white pl-12 pr-4 py-[17px] text-sm text-[#2C2C2C] outline-none placeholder:text-[#C1C1C1] focus:border-[var(--color-brand-accent)] focus:ring-1 focus:ring-[var(--color-brand-accent)]"
           />
         </div>
         <Button
-          className="mt-10"
+          className="mt-10 font-plusJakartaSans "
           onClick={() => router.push("/onboarding/verify")}
           endIcon={<ArrowRightIcon className="h-4 w-4" />}
         >
           Continue
         </Button>
       </form>
-        <p className="mt-6 mb-10 text-center text-[16px] leading-[24px] tracking-[0px] text-[#3C4A46] font-medium">
+        <p className="font-manrope mt-6 mb-10 text-center text-[16px] leading-[24px] tracking-[0px] text-[#3C4A46] font-medium">
             Don't have an account?{" "}
-            <a href="/login" className="font-semibold text-[var(--color-brand-primary-deep)]">
+            <a href="/onboarding" className="font-semibold text-[var(--color-brand-primary-deep)]">
                 Sign up
             </a>
         </p>
-        <div className="mt-auto flex items-center justify-center gap-1.5 pt-2 text-[12px] font-medium leading-[16px] text-[#6C7A76] border-t-[1px] border-[#E1E1E1]">
+        <div className=" font-manrope mt-auto flex items-center justify-center gap-1.5 pt-2 text-[12px] font-medium leading-[16px] text-[#6C7A76] border-t-[1px] border-[#E1E1E1]">
             <LockIcon className="h-3.5 w-3.5" />
             <span>Secured by Voya Vault Systems</span>
         </div>

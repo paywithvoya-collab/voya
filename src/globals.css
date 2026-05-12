@@ -30,3 +30,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+.font-plusJakartaSans {
+  font-family: var(--font-plus-jakarta-sans) ;
+}
