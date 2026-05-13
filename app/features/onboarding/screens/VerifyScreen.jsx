@@ -1,12 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import Button from "../../../components/ui/Button";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ClockIcon,
+  LockIcon,
+} from "../../../components/ui/Icons";
 import ProgressSteps from "../../../components/ui/ProgressSteps";
 import OtpInput from "../components/OtpInput";
-import Button from "../../../components/ui/Button";
-import { ArrowLeftIcon, ArrowRightIcon, ClockIcon, LockIcon } from "../../../components/ui/Icons";
 
 const RESEND_SECONDS = 24;
 
@@ -22,7 +29,7 @@ export default function VerifyScreen({ maskedPhone = "+234 ••• ••• 4
   }, [seconds]);
 
   const formatted = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(
-    seconds % 60
+    seconds % 60,
   ).padStart(2, "0")}`;
 
   function handleResend() {
@@ -32,7 +39,6 @@ export default function VerifyScreen({ maskedPhone = "+234 ••• ••• 4
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#f5f5f7] p-4 sm:p-8">
       <div className="relative flex w-full max-w-[960px] overflow-hidden rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.10)]">
-
         {/* ── Left: Photo panel ── */}
         <div className="relative hidden lg:block lg:w-[55%]">
           <button
@@ -56,7 +62,6 @@ export default function VerifyScreen({ maskedPhone = "+234 ••• ••• 4
 
         {/* ── Right: Form panel ── */}
         <div className="flex w-full flex-col bg-white px-8 py-9 sm:px-10 lg:w-[45%]">
-
           <ProgressSteps currentStep={1} totalSteps={5} />
 
           <div className="mt-7">
@@ -93,6 +98,7 @@ export default function VerifyScreen({ maskedPhone = "+234 ••• ••• 4
 
           <Button
             className="mt-6"
+            onClick={() => router.push("/onboarding/profileSetUp")}
             endIcon={<ArrowRightIcon className="h-4 w-4" />}
           >
             Verify and Continue
