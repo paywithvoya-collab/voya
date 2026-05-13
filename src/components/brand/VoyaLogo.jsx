@@ -1,4 +1,4 @@
-function VoyaMark({ className = "" }) {
+export function VoyaMark({ className = "" }) {
   return (
     <svg
       viewBox="0 0 283 160"
