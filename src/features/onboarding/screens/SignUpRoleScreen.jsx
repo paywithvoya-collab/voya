@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import VoyaLogo from "../../../components/brand/VoyaLogo";
-import RoleOptionButton from "../components/RoleOptionButton";
+import RoleOptionButton from "../components/common/RoleOptionButton";
 import { ArrowLeftIcon } from "../../../components/ui/Icons";
 
 const signUpOptions = [
@@ -10,7 +10,7 @@ const signUpOptions = [
   { id: "freelancer", label: "As Freelancer", variant: "secondary" },
 ];
 
-export default function SignUpChoiceScreen() {
+export default function SignUpRoleScreen() {
   const router = useRouter();
 
   return (
