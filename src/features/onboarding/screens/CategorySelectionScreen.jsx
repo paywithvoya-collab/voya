@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import Button from '@/app/components/ui/Button';
+import Button from '@/src/components/ui/Button';
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -15,8 +15,9 @@ import {
   Palette,
   Sparkles,
   TextIcon,
-} from '@/app/components/ui/Icons';
-import ProgressSteps from '@/app/components/ui/ProgressSteps';
+} from '@/src/components/ui/Icons';
+//import ProgressSteps from '@/app/components/ui/ProgressSteps';
+import ProgressSteps from '@/src/components/ui/ProgressSteps';
 
 // 1. Define your data outside the component or in a separate config file
 const CATEGORIES = [
@@ -93,7 +94,7 @@ export const CategorySelectionScreen = () => {
           </div>
           <Button
             className="tracking-widest font-extralight cursor-pointer"
-            onClick={() => router.push("/onboarding/selectCategory")}
+            onClick={() => router.push("/onboarding")}
             endIcon={<ArrowRightIcon className="h-4 w-4" />}
           >
             Continue

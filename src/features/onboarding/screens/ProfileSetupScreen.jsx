@@ -3,14 +3,14 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import Button from '@/app/components/ui/Button';
+import Button from '@/src/components/ui/Button';
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
-} from '@/app/components/ui/Icons';
-import ProgressSteps from '@/app/components/ui/ProgressSteps';
+} from '@/src/components/ui/Icons';
+import ProgressSteps from '@/src/components/ui/ProgressSteps';
 
-import { FormInput } from '../components/FormInput';
+import { FormInput } from '../components/common/FormInput';
 
 export const ProfileSetupScreen = () => {
   const router = useRouter();
