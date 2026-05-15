@@ -94,7 +94,7 @@ export const CategorySelectionScreen = () => {
           </div>
           <Button
             className="tracking-widest font-extralight cursor-pointer"
-            onClick={() => router.push("/onboarding")}
+            onClick={() => router.push("/onboarding/username")}
             endIcon={<ArrowRightIcon className="h-4 w-4" />}
           >
             Continue

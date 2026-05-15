@@ -37,7 +37,7 @@ export default function ContactSetupScreen() {
             <h1 className="text-[1.75rem] font-extrabold leading-tight tracking-tight text-[#1a1a1a]">
               Let&apos;s get you set up
             </h1>
-            <p className="mt-2 text-[0.875rem] leading-relaxed text-[#6b6b6b]">
+            <p className="mt-2 font-montserrat text-[0.875rem] leading-relaxed text-[#6b6b6b]">
               Start your journey to financial clarity in seconds.
             </p>
           </div>
@@ -82,14 +82,19 @@ export default function ContactSetupScreen() {
           <Button
             className="mt-5"
             onClick={() => router.push("/onboarding/verify")}
-            endIcon={<ArrowRightIcon className="h-4 w-4" />}
+            endIcon={<ArrowRightIcon className="h-4 w-4 font-manrope"/>}
           >
             Continue
           </Button>
 
           <p className="mt-6 text-center text-sm text-[#7a7a7a]">
             Already have an account?{" "}
-            <a href="/login" className="font-semibold text-[var(--color-brand-primary-deep)]">
+            <a href="/login" className="font-semibold text-[var(--color-brand-primary-deep)]"
+              onClick = {(e) => {
+                e.preventDefault();
+                router.push("/onboarding/login");
+              }}
+            >
               Log in
             </a>
           </p>

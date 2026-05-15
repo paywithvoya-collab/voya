@@ -52,16 +52,16 @@ export const ProfileSetupScreen = () => {
               label={"First Name"}
               className={"text-black/79"}
               placeholder={"e.g Julian"}
-              inputClassName={`block bg-[#f4efef] py-2.5`}
+              inputClassName={`block bg-[#F6F3F2] py-2.5`}
             />
             <FormInput
               label={"Last Name"}
               className={"text-black/79 pt-1.5"}
               placeholder={"e.g Thorne"}
-              inputClassName={`block bg-[#f4efef] py-2.5`}
+              inputClassName={`block bg-[#F6F3F2] py-2.5`}
             />
           </div>
-          <div className="flex items-center gap-2 rounded-xl text-gray-600 text-sm bg-[#f4efef]  py-3 px-5 mb-3">
+          <div className="flex items-center gap-2 rounded-xl text-gray-600 text-sm bg-[#F6F3F2]  py-3 px-5 mb-3">
             {/* icon */}
             <div className="bg-green-400/30 w-10 h-10 rounded-full"></div>
             {/* description */}
